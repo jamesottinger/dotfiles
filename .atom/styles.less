@@ -1,0 +1,39 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+@git-change-green-dark: #9cf760;
+@git-change-green-light: #a8ff60;
+@git-change-orange: #f2da3b;
+
+.tree-view {
+
+}
+
+.editor {
+
+    .gutter
+       .line-number.git-line-added {
+            background-color: #000000;
+            color: @git-change-green-dark;
+            border-left: 2px solid @git-change-green-light;
+        }
+        .line-number.git-line-modified {
+            background-color: #000000;
+            color: @git-change-orange;
+            border-left: 2px solid @git-change-orange;
+        }
+        .line-number.git-line-removed {
+            // wip
+        }
+}
+
+.editor .cursor {
+
+}
