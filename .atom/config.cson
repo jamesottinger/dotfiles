@@ -1,0 +1,24 @@
+'global':
+  'exception-reporting':
+    'userId': 'd6cce6d3-8edc-7aa7-3533-164e95a2df39'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': '3078c79434fb7e7a9e92446d61dc2820e5e53007'
+  'editor':
+    'fontFamily': 'ProggyOpti'
+    'showInvisibles': true
+    'tabLength': 4
+    'lineHeight': 1
+    'showIndentGuide': true
+    'fontSize': 11
+    'invisibles': {}
+  'core':
+    'themes': [
+      'atom-soda-dark-ui'
+      'bluzie'
+    ]
+  'linter':
+    'showErrorInline': true
+    'lintDebug': true
+    'statusBar': 'Show all errors'
