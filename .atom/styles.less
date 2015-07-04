@@ -8,16 +8,15 @@
  * http://www.lesscss.org
  */
 
-@git-change-green-dark: #9cf760;
+@git-change-green-dark: #2c6303;
 @git-change-green-light: #a8ff60;
-@git-change-orange: #f2da3b;
+@git-change-orange: #ff982d;
 
 .tree-view {
 
 }
 
 .editor {
-
     .gutter
        .line-number.git-line-added {
             background-color: #000000;
@@ -38,7 +37,45 @@
 
 }
 
+
+
+
+.trailing-whitespace {
+    background: linear-gradient(#4e4e4e, #434343);
+    background: #a91164;
+    border-radius: 2px;
+}
+
+
 .editor .invisible-character,
 :host .invisible-character {
     color: #4d0073;
+}
+
+.editor .indent-guide,
+:host .indent-guide {
+    box-shadow: 1px 0 #000000;
+    color: #000000;
+}
+
+.editor {
+    .wrap-guide {
+        background-color: #232323;
+        color: #000000;
+    }
+}
+
+
+.editor .gutter .line-number {
+    opacity: 0.9;
+}
+atom-text-editor .line-number {
+    white-space: nowrap;
+    padding-left: .5em;
+    opacity: 0.6;
+}
+
+atom-text-editor::shadow .wrap-guide {
+  width: 1px;
+  background-color: #232323;
 }
