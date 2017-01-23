@@ -11,14 +11,15 @@
 @git-change-green-dark: #2c6303;
 @git-change-green-light: #a8ff60;
 @git-change-orange: #ff982d;
-
-.tree-view {
-
-}
+@gray-very-dark: #363636;
+@gray-dark: #232323;
+@gray-medium: #666666;
+@pink: #ec8aab;
+@black: #000000;
 
 .editor {
-    .gutter
-       .line-number.git-line-added {
+    .gutter {
+        .line-number.git-line-added {
             background-color: #000000;
             color: @git-change-green-dark;
             border-left: 2px solid @git-change-green-light;
@@ -28,54 +29,44 @@
             color: @git-change-orange;
             border-left: 2px solid @git-change-orange;
         }
-        .line-number.git-line-removed {
+            .line-number.git-line-removed {
             // wip
         }
-}
-
-.editor .cursor {
-
-}
-
-
-
-
-.trailing-whitespace {
-    background: linear-gradient(#4e4e4e, #434343);
-    background: #a91164;
-    border-radius: 2px;
-}
-
-
-.editor .invisible-character,
-:host .invisible-character {
-    color: #4d0073;
-}
-
-.editor .indent-guide,
-:host .indent-guide {
-    box-shadow: 1px 0 #000000;
-    color: #000000;
-}
-
-.editor {
+            .line-number {
+            opacity: 0.9;
+        }
+    }
+    .cursor {
+        color: #4e4e4e;
+    }
+    .trailing-whitespace {
+        text-decoration: underline;
+        color: @pink !important; // shut up plugin
+    }
+    .invisible-character {
+        color: @gray-very-dark;
+    }
+    .indent-guide {
+        box-shadow: 1px 0 @gray-very-dark;
+        color: @gray-very-dark;
+    }
     .wrap-guide {
-        background-color: #232323;
-        color: #000000;
+        background-color: @gray-dark;
+        color: @black;
     }
 }
-
-
-.editor .gutter .line-number {
-    opacity: 0.9;
+atom-text-editor {
+    .line-number {
+        color: @gray-medium;
+        white-space: nowrap;
+        padding-left: .5em;
+        opacity: 0.9;
+    }
+    .wrap-guide {
+      width: 1px;
+      background-color: @gray-dark;
+    }
 }
-atom-text-editor .line-number {
-    white-space: nowrap;
-    padding-left: .5em;
-    opacity: 0.6;
-}
-
-atom-text-editor::shadow .wrap-guide {
-  width: 1px;
-  background-color: #232323;
+.tree-view {
+    //wip
 }
